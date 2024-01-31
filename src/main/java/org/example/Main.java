@@ -16,7 +16,6 @@ public class Main {
 
         Session session = FactoryConfiguration.getInstance().getSession();
 
-
         session.save(employee);
         session.close();
 
