@@ -15,8 +15,10 @@ public class Main {
         employee.setSalary(50000.00);
 
         Session session = FactoryConfiguration.getInstance().getSession();
-
+        Transaction transaction = session.beginTransaction();
         session.save(employee);
+        transaction.commit();
+
         session.close();
 
     }
