@@ -17,7 +17,8 @@ public class Main {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
        // session.save(employee);
-        session.update(employee);
+       // session.update(employee);
+        session.delete(employee);
         transaction.commit();
 
         session.close();
