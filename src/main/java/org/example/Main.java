@@ -10,13 +10,14 @@ public class Main {
 
         Employee employee = new Employee();
         employee.setId(1);
-        employee.setName("Dinelka");
+        employee.setName("Lashan");
         employee.setAddress("Galle");
         employee.setSalary(50000.00);
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.save(employee);
+       // session.save(employee);
+        session.update(employee);
         transaction.commit();
 
         session.close();
